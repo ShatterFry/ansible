@@ -1,0 +1,6 @@
+---
+- name: play
+  hosts: lab
+  tasks:
+   - name: test ping module
+     ansible.builtin.ping:
