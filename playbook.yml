@@ -1,0 +1,14 @@
+---
+- name: test playbook
+  hosts: lab
+  tasks:
+    - name: test shell module
+      ansible.builtin.shell: ls $HOME
+    - name: test date command
+      command: date
+    - name: test remote file content print
+      command: cat $HOME/dev/test.sh
+    - name: test local to remote script execution
+      script: test.sh
+      register: script_result
+    - debug: var=script_result

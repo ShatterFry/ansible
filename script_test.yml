@@ -1,0 +1,6 @@
+---
+- name: script test playbook
+  hosts: lab
+  tasks:
+    - name: test script module
+      script: test.sh
